@@ -30,7 +30,7 @@ header {
     width: 95%;
     align-items: center;
     padding: 10px;
-    background: linear-gradient(to right, black, rgb(204, 0, 255));
+    background: linear-gradient(to right, #8E2DE2, #4A00E0);
     padding: 0 12px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -70,15 +70,16 @@ header {
     color: white;
     cursor: pointer;
     font-size: 20px;
-}
-
-.menu-toggle:hover {
-    background-color: aqua;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
+}
+
+.menu-toggle:hover {
+    background-color: white;
+    color: #4A00E0;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
