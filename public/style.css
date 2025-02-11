@@ -40,29 +40,32 @@ header {
 }
 
 .list-item {
+    position: relative;
     display: flex;
-    gap: 12px;
+    gap: 20px;
 }
 
 .list-item a {
+    position: relative;
     text-decoration: none;
-    color: white;
-    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
 }
 
-.list-item a :hover,
-.list-item a :visited {
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    color: aqua;
+.list-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
 }
 
-.list-item a.active {
-    color: aqua;
-    /* Warna setelah diklik */
+.list-item a.active::after {
+    width: 100%;
 }
 
 .menu-toggle {
