@@ -12,6 +12,10 @@
     ],
     "routes": [
         {
+            "src": "/kalkulator",
+            "dest": "public/calc/calculator.html"
+        },
+        {
             "src": "/contact/send",
             "dest": "/api/sendEmail.js"
         },
