@@ -27,7 +27,7 @@ header {
 .navbar {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     align-items: center;
     padding: 10px;
     background: linear-gradient(to right, #8E2DE2, #4A00E0);
