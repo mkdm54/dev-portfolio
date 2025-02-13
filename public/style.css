@@ -18,6 +18,7 @@ body {
     width: 100%;
 }
 
+/* header */
 header {
     display: flex;
     justify-content: center;
