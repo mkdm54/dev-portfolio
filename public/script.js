@@ -1,8 +1,13 @@
-document.querySelectorAll('.list-item a').forEach(link => {
-    link.addEventListener('click', function() {
-        // Hapus class 'active' dari semua link
-        document.querySelectorAll('.list-item a').forEach(el => el.classList.remove('active'));
-        // Tambahkan class 'active' ke link yang diklik
-        this.classList.add('active');
-    });
+const menuToggle = document.querySelector(".menu-toggle");
+const sidebar = document.querySelector(".sidebar");
+const overlay = document.querySelector(".overlay");
+
+menuToggle.addEventListener("click", function () {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", function () {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
 });
