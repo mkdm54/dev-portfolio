@@ -30,6 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 95%;
+    height: 50px;
     padding: 0 10px;
     align-items: center;
     background: linear-gradient(to right, #8E2DE2, #4A00E0);
