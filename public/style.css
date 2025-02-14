@@ -115,7 +115,8 @@ header {
     color: white;
     position: fixed;
     display: flex;
-    flex-direction: column; /* Mengatur isi sidebar secara vertikal */
+    flex-direction: column;
+    /* Mengatur isi sidebar secara vertikal */
     left: -300px;
     top: 0;
     padding: 20px;
@@ -159,9 +160,6 @@ header {
     font-size: 20px;
     margin-right: 5px;
 }
-.sidebar a:hover {
-    color: #FFD700; /* Warna berubah saat hover */
-}
 
 .footer-sidebar {
     color: rgb(182, 182, 182);
@@ -169,10 +167,84 @@ header {
     text-align: center;
 }
 
-
 .sidebar.active {
     left: 0;
 }
+
+/* hover sidebar instagram animation */
+.sidebar-menu a {
+    display: inline-flex;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.sidebar-menu .instagram a:hover {
+    background: linear-gradient(45deg, #FFD600, #FF7A00, #FF0069, #D300C5, #7638FA);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: instagram-move 3s infinite linear;
+    -webkit-animation: instagram-move 3s infinite linear;
+}
+
+/* Animasi Gradient Bergerak */
+@keyframes instagram-move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* hover sidebar Facebook */
+.sidebar-menu .facebook a:hover {
+    color: rgb(1, 101, 225);
+}
+
+/* hover sidebar WhatsApp */
+.sidebar-menu .whatsapp a:hover {
+    color: rgb(95, 252, 123);
+}
+
+/* hover sidebar email */
+.sidebar-menu .email a:hover {
+    background: linear-gradient(45deg, #4285F4, #BB001B, #EA4335, #FBBC05, #34A853);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: emailMove 5s infinite ease-in-out;
+}
+
+/* Animasi Gradient Bergerak */
+@keyframes emailMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .overlay {
     display: none;
