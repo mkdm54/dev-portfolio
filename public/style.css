@@ -49,12 +49,14 @@ header {
 
 .list-item a {
     position: relative;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     list-style-type: none;
-    color: rgb(255, 255, 255);
     padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
 }
 
+/* Efek Underline */
 .list-item a::after {
     content: "";
     position: absolute;
@@ -67,9 +69,20 @@ header {
     transform: translateX(-50%);
 }
 
+/* Efek saat hover */
+.list-item a:hover {
+    color: aqua;
+}
+
+/* Efek saat diklik (active) */
+.list-item a.active {
+    color: aqua;
+}
+
 .list-item a.active::after {
     width: 100%;
 }
+
 
 .menu-toggle {
     padding: 0 12px;
