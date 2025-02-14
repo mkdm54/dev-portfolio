@@ -130,18 +130,35 @@ header {
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    gap: 2px; /* Jarak antar menu */
+    align-items: center;
 }
 
-.sidebar a {
+.sidebar-menu ul {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     list-style-type: none;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 2px 0;
-    display: block;
-    transition: color 0.3s;
+    gap: 15px;
 }
 
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-menu a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
 .sidebar a:hover {
     color: #FFD700; /* Warna berubah saat hover */
 }
