@@ -114,6 +114,8 @@ header {
     background: linear-gradient(to bottom right, #8E2DE2, #4A00E0);
     color: white;
     position: fixed;
+    display: flex;
+    flex-direction: column; /* Mengatur isi sidebar secara vertikal */
     left: -300px;
     top: 0;
     padding: 20px;
@@ -125,11 +127,31 @@ header {
     -o-transition: 0.4s;
 }
 
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Jarak antar menu */
+}
+
 .sidebar a {
     list-style-type: none;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
+    padding: 2px 0;
+    display: block;
+    transition: color 0.3s;
 }
+
+.sidebar a:hover {
+    color: #FFD700; /* Warna berubah saat hover */
+}
+
+.footer-sidebar {
+    color: rgb(182, 182, 182);
+    font-size: 10px;
+    text-align: center;
+}
+
 
 .sidebar.active {
     left: 0;
