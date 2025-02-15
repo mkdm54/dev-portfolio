@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
 const overlay = document.querySelector(".overlay");
+const sidebarLinks = document.querySelectorAll(".sidebar a");
 
 menuToggle.addEventListener("click", function () {
     sidebar.classList.toggle("active");
@@ -10,6 +11,13 @@ menuToggle.addEventListener("click", function () {
 overlay.addEventListener("click", function () {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
+});
+
+sidebarLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
