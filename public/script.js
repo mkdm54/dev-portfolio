@@ -1,27 +1,29 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const sidebar = document.querySelector(".sidebar");
-const overlay = document.querySelector(".overlay");
-const sidebarLinks = document.querySelectorAll(".sidebar a");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.querySelector(".overlay");
+    const sidebarLinks = document.querySelectorAll(".sidebar a");
+    const links = document.querySelectorAll(".list-item a");
 
-menuToggle.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-});
+    // Fungsi untuk menangani klik pada menuToggle
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
 
-overlay.addEventListener("click", function () {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-});
-
-sidebarLinks.forEach(link => {
-    link.addEventListener("click", function () {
+    // Fungsi untuk menangani klik pada overlay
+    overlay.addEventListener("click", function () {
         sidebar.classList.remove("active");
         overlay.classList.remove("active");
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".list-item a");
+    // Fungsi untuk menangani klik pada link di sidebar
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+    });
 
     // Cek menu yang terakhir diklik di localStorage
     const activePage = localStorage.getItem("activeMenu");
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Fungsi untuk menangani klik pada link dalam .list-item
     links.forEach(link => {
         link.addEventListener("click", function () {
             // Hapus class active dari semua menu
