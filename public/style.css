@@ -116,7 +116,7 @@ header {
     position: fixed;
     display: flex;
     flex-direction: column;
-    /* Mengatur isi sidebar secara vertikal */
+    justify-content: space-between;
     left: -300px;
     top: 0;
     padding: 20px;
@@ -128,32 +128,26 @@ header {
     -o-transition: 0.4s;
 }
 
+
 .sidebar-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-grow: 1
 }
 
 .sidebar-menu ul {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    list-style-type: none;
-    gap: 15px;
-}
-
-.sidebar-menu li {
     display: flex;
-    align-items: center;
-    padding: 6px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 10px;
+    list-style: none;
 }
 
 .sidebar-menu a {
+    display: block;
     text-decoration: none;
     color: white;
-    display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .sidebar-menu a i {
@@ -162,6 +156,7 @@ header {
 }
 
 .footer-sidebar {
+    margin-bottom: 20px;
     color: rgb(182, 182, 182);
     font-size: 10px;
     text-align: center;
