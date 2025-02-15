@@ -1,23 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Sidebar functionality
     const menuToggle = document.querySelector(".menu-toggle");
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.querySelector(".overlay");
     const sidebarLinks = document.querySelectorAll(".sidebar a");
-    const links = document.querySelectorAll(".list-item a");
 
-    // Fungsi untuk menangani klik pada menuToggle
     menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("active");
         overlay.classList.toggle("active");
     });
 
-    // Fungsi untuk menangani klik pada overlay
     overlay.addEventListener("click", function () {
         sidebar.classList.remove("active");
         overlay.classList.remove("active");
     });
 
-    // Fungsi untuk menangani klik pada link di sidebar
     sidebarLinks.forEach(link => {
         link.addEventListener("click", function () {
             sidebar.classList.remove("active");
@@ -25,7 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Cek menu yang terakhir diklik di localStorage
+    // Navbar functionality
+    const links = document.querySelectorAll(".list-item a");
+
+    // Check the last clicked menu in localStorage
     const activePage = localStorage.getItem("activeMenu");
 
     if (activePage) {
@@ -36,16 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Fungsi untuk menangani klik pada link dalam .list-item
     links.forEach(link => {
         link.addEventListener("click", function () {
-            // Hapus class active dari semua menu
+            // Remove active class from all menu items
             links.forEach(l => l.classList.remove("active"));
 
-            // Tambahkan class active ke menu yang diklik
+            // Add active class to the clicked menu item
             this.classList.add("active");
 
-            // Simpan menu yang aktif ke localStorage
+            // Save the active menu item to localStorage
             localStorage.setItem("activeMenu", this.href);
         });
     });
