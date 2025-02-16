@@ -107,7 +107,7 @@ header {
 }
 
 
-/* Sidebar */
+/* *Sidebar */
 .sidebar {
     width: 150px;
     height: 100vh;
@@ -188,7 +188,7 @@ header {
 }
 
 .sidebar-menu .instagram:hover {
-    padding: 7px;
+    padding: 5px;
     background-color: white;
 }
 
@@ -225,7 +225,7 @@ header {
 
 .sidebar-menu .facebook:hover {
     background-color: white;
-    padding: 6%;
+    padding: 5px;
 }
 
 /* Agar link memenuhi seluruh area li */
@@ -249,7 +249,7 @@ header {
 
 .sidebar-menu .whatsapp:hover {
     background-color: white;
-    padding: 6%;
+    padding: 5px;
 }
 
 .sidebar-menu .whatsapp a {
@@ -276,7 +276,7 @@ header {
 
 .sidebar-menu .threads:hover {
     background-color: white;
-    padding: 7px;
+    padding: 5px;
 }
 
 .sidebar-menu .threads a {
@@ -302,7 +302,7 @@ header {
 
 .sidebar-menu .tiktok:hover {
     background-color: white;
-    padding: 7px;
+    padding: 5px;
 }
 
 .sidebar-menu .tiktok a {
@@ -328,7 +328,7 @@ header {
 
 .sidebar-menu .email:hover {
     background-color: white;
-    padding: 7px;
+    padding: 5px;
 }
 
 .sidebar-menu .email a {
