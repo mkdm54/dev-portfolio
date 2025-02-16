@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 95%;
-    height: 50px;
+    height: 45px;
     padding: 0 10px;
     align-items: center;
     background: linear-gradient(to right, #8E2DE2, #4A00E0);
@@ -85,7 +85,7 @@ header {
 
 
 .menu-toggle {
-    padding: 0 12px;
+    padding: 0 10px;
     color: white;
     cursor: pointer;
     font-size: 20px;
