@@ -3,7 +3,7 @@
     "routes": [
         {
             "src": "/kalkulator",
-            "dest": "public/calc/calculator.html"
+            "dest": "/calc/calculator.html"
         },
         {
             "src": "/contact/send",
@@ -11,7 +11,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/public/$1"
+            "dest": "/$1"
         }
     ]
 }
