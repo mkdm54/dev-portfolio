@@ -33,7 +33,7 @@ header {
     height: 45px;
     padding: 0 10px;
     align-items: center;
-    background: linear-gradient(to right, #8E2DE2, #4A00E0);
+    background: linear-gradient(to left, #160078, #4A00E0);
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -98,7 +98,7 @@ header {
 
 .menu-toggle:hover {
     background-color: white;
-    color: #4A00E0;
+    color: #160078;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -111,7 +111,7 @@ header {
 .sidebar {
     width: 150px;
     height: 100vh;
-    background: linear-gradient(to bottom right, #8E2DE2, #4A00E0);
+    background: linear-gradient(to bottom left, #160078, #4A00E0);
     color: white;
     position: fixed;
     display: flex;
