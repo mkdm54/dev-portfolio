@@ -7,7 +7,7 @@
         },
         {
             "src": "/contact/send",
-            "dest": "/api/sendEmail.js"
+            "dest": "/api/send-email.js"
         },
         {
             "src": "/(.*)",
