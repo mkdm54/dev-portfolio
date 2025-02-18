@@ -2,11 +2,11 @@
     "routes": [
         {
             "src": "/calculator",
-            "dest": "/public/calc/calculator.html"
+            "dest": "/calc/calculator.html"
         },
         {
             "src": "/guess-number",
-            "dest": "/public/guess-number/guess-number.html"
+            "dest": "/guess-number/guess-number.html"
         }
     ]
 }
