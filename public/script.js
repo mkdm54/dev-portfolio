@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Sidebar functionality
+    setupSidebar();
+    setupNavbar();
+});
+
+// Fungsi untuk Sidebar
+function setupSidebar() {
     const menuToggle = document.querySelector(".menu-toggle");
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.querySelector(".overlay");
@@ -21,11 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
             overlay.classList.remove("active");
         });
     });
+}
 
-    // Navbar functionality
+// Fungsi untuk Navbar Links
+function setupNavbar() {
     const links = document.querySelectorAll(".nav-links a");
 
-    // Check the last clicked menu in localStorage
+    // Cek menu aktif terakhir di localStorage
     const activePage = localStorage.getItem("activeMenu");
 
     if (activePage) {
@@ -38,14 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     links.forEach(link => {
         link.addEventListener("click", function () {
-            // Remove active class from all menu items
+            // Hapus semua kelas aktif
             links.forEach(l => l.classList.remove("active"));
 
-            // Add active class to the clicked menu item
+            // Tambahkan kelas aktif ke menu yang diklik
             this.classList.add("active");
 
-            // Save the active menu item to localStorage
+            // Simpan menu aktif ke localStorage
             localStorage.setItem("activeMenu", this.href);
         });
     });
-});
+}
