@@ -1,12 +1,12 @@
 {
     "rewrites": [
         {
-            "src": "/calculator",
-            "dest": "/public/calc/calculator.html"
+            "source": "/calculator",
+            "destination": "/calculator/calculator.html"
         },
         {
-            "src": "/guess-number",
-            "dest": "/public/guess-number/guess-number.html"
+            "source": "/guess-number",
+            "destination": "/guess-number/guess-number.html"
         }
     ]
 }
