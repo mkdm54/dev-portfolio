@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     setupSidebar();
-    highlightActiveLinkk();
+    highlightActiveLink();
 });
 
 // Fungsi untuk Sidebar
