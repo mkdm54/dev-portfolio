@@ -10,17 +10,30 @@ function setupSidebar() {
     const overlay = document.querySelector(".overlay");
     const sidebarLinks = document.querySelectorAll(".sidebar a");
 
+    activeSidebar(menuToggle, sidebar, overlay);
+    closeSidebar(overlay, sidebar);
+    closeSidebarOnEmailClick(sidebarLinks, sidebar, overlay);
+}
+
+// Fungsi untuk menangani toggle menu
+function activeSidebar(menuToggle, sidebar, overlay) {
     menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("active");
         overlay.classList.toggle("active");
     });
+}
 
+// Fungsi untuk menangani klik di overlay
+function closeSidebar(overlay, sidebar) {
     overlay.addEventListener("click", function () {
         sidebar.classList.remove("active");
         overlay.classList.remove("active");
     });
+}
 
-    sidebarLinks.forEach(link => {
+// Fungsi untuk menangani klik pada link di sidebar
+function closeSidebarOnEmailClick(links, sidebar, overlay) {
+    links.forEach(link => {
         link.addEventListener("click", function () {
             sidebar.classList.remove("active");
             overlay.classList.remove("active");
