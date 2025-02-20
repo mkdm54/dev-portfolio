@@ -2,7 +2,7 @@
     "routes": [
         {
             "src": "/calculator",
-            "dest": "/calculator/calculator.html"
+            "dest": "/calc/calculator.html"
         },
         {
             "src": "/guess-number",
