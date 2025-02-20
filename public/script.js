@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Navbar functionality
-    const links = document.querySelectorAll(".list-item a");
+    const links = document.querySelectorAll(".nav-links a");
 
     // Check the last clicked menu in localStorage
     const activePage = localStorage.getItem("activeMenu");
