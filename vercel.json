@@ -1,12 +1,12 @@
 {
-    "routes": [
+    "rewrites": [
         {
-            "source": "/calculator",
-            "destination": "/calculator/calculator.html"
+            "src": "/calculator",
+            "dest": "/calculator/calculator.html"
         },
         {
-            "source": "/guess-number",
-            "destination": "/guess-number/guess-number.html"
+            "src": "/guess-number",
+            "dest": "/guess-number/guess-number.html"
         }
     ]
 }
