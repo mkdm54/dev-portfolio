@@ -30,9 +30,9 @@ function setupSidebar() {
 
 // Fungsi untuk Navbar Links
 function highlightActiveLink() {
-    const links = document.querySelectorAll(".nav-links a");
+    localStorage.removeItem("activeMenu"); // Hapus menu aktif setiap kali halaman direfresh
 
-    // Cek menu aktif terakhir di localStorage
+    const links = document.querySelectorAll(".nav-links a");
     const activePage = localStorage.getItem("activeMenu");
 
     if (activePage) {
@@ -45,13 +45,10 @@ function highlightActiveLink() {
 
     links.forEach(link => {
         link.addEventListener("click", function () {
-            // Hapus semua kelas aktif
             links.forEach(l => l.classList.remove("active"));
 
-            // Tambahkan kelas aktif ke menu yang diklik
             this.classList.add("active");
 
-            // Simpan menu aktif ke localStorage
             localStorage.setItem("activeMenu", this.href);
         });
     });
