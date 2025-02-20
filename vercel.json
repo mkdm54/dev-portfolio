@@ -1,5 +1,5 @@
 {
-    "rewrites": [
+    "routes": [
         {
             "source": "/calculator",
             "destination": "/calculator/calculator.html"
