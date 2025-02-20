@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     setupSidebar();
-    closeSidebarOnEmailClick();
+    highlightActiveLinkk();
 });
 
 // Fungsi untuk Sidebar
@@ -29,7 +29,7 @@ function setupSidebar() {
 }
 
 // Fungsi untuk Navbar Links
-function closeSidebarOnEmailClick() {
+function highlightActiveLink() {
     const links = document.querySelectorAll(".nav-links a");
 
     // Cek menu aktif terakhir di localStorage
