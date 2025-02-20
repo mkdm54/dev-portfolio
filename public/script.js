@@ -30,7 +30,7 @@ function setupSidebar() {
 
 // Fungsi untuk Navbar Links
 function highlightActiveLink() {
-    localStorage.removeItem("activeMenu"); // Hapus menu aktif setiap kali halaman direfresh
+    localStorage.removeItem("activeMenu");
 
     const links = document.querySelectorAll(".nav-links a");
     const activePage = localStorage.getItem("activeMenu");
