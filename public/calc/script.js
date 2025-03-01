@@ -24,8 +24,8 @@ const calculate = () => {
     const operators = ['+', '-', '*', '/'];
 
     if (display.value.trim() === '') {
-        alertBox.innerHTML = "<h3>! Masukkan angka terlebih dahulu!</h3>";
-        alertBox.classList.add('active');  // Tampilkan alert dari atas 
+        alertBox.innerHTML = "<h3>Masukkan angka terlebih dahulu!</h3>";
+        alertBox.classList.add('active');
         setTimeout(() => {
             alertBox.classList.remove('active'); 
         }, 3000);
@@ -33,7 +33,7 @@ const calculate = () => {
     }
 
     if (operators.includes(lastChar)) {
-        alertBox.innerHTML = "<h3>! Ekspresi tidak valid! Periksa input Anda.</h3>";
+        alertBox.innerHTML = "<h3>Ekspresi tidak valid Periksa input Anda.</h3>";
         alertBox.classList.add('active');
         setTimeout(() => {
             alertBox.classList.remove('active'); 
@@ -43,9 +43,9 @@ const calculate = () => {
 
     try {
         display.value = eval(display.value);
-        alertBox.classList.remove('active'); // Hilangkan alert setelah sukses
+        alertBox.classList.remove('active');
     } catch (e) {
-        alertBox.innerHTML = "<h3>! Ekspresi tidak valid! Periksa input Anda.</h3>";
+        alertBox.innerHTML = "<h3>Ekspresi tidak valid! Periksa input Anda.</h3>";
         setTimeout(() => {
             alertBox.classList.remove('active'); 
         }, 3000);
