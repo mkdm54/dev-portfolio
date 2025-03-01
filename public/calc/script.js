@@ -13,6 +13,6 @@ const calculate = () => {
 };
 
 function backspace() {
-    var inputField = document.getElementById("inputField");
+    var inputField = document.getElementById("display-the-result");
     inputField.value = inputField.value.slice(0, -1);
 }
