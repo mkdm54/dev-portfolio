@@ -5,10 +5,6 @@
             "dest": "/calc/calculator.html"
         },
         {
-            "src": "/calculator/(.*)",
-            "dest": "/calc/$1"
-        },
-        {
             "src": "/guess-number",
             "dest": "/guess-number/guess-number.html"
         }
