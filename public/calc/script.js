@@ -9,10 +9,27 @@ const clearDisplay = () => {
 };
 
 const calculate = () => {
-    display.value = eval(display.value);
+    try {
+        display.value = eval(display.value);
+    } catch (e) {
+        display.value = 'Error';
+    }
 };
 
 function backspace() {
-    var inputField = document.getElementById("display-the-result");
-    inputField.value = inputField.value.slice(0, -1);
+    display.value = display.value.slice(0, -1);
+}
+
+// Fungsi untuk ± (toggle sign)
+function toggleSign() {
+    if (display.value !== '') {
+        display.value = String(-1 * parseFloat(display.value));
+    }
+}
+
+// Fungsi untuk % (percentage)
+function calculatePercentage() {
+    if (display.value !== '') {
+        display.value = String(parseFloat(display.value) / 100);
+    }
 }

@@ -20,7 +20,7 @@
             <div class="row">
                 <button onclick="clearDisplay()" class="clear-btn">AC</button>
                 <button onclick="backspace()" class="backspace-btn"><i class="fa-solid fa-delete-left"></i></button>
-                <button class="operator-btn">&percnt;</button>
+                <button onclick="calculatePercentage()" class="operator-btn">&percnt;</button>
                 <button onclick="appendToDisplay('/')" class="operator-btn">&divide;</button>
             </div>
             <div class="row">
@@ -42,7 +42,7 @@
                 <button onclick="appendToDisplay('+')" class="operator-btn">&plus;</button>
             </div>
             <div class="row">
-                <button class="operator-btn">&plusmn;</button>
+                <button onclick="toggleSign()" class="operator-btn">&plusmn;</button>
                 <button onclick="appendToDisplay('0')" class="number-btn">0</button>
                 <button onclick="appendToDisplay('.')" class="number-btn">.</button>
                 <button onclick="calculate()" class="equal-btn">&equals;</button>
