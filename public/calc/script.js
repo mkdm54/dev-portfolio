@@ -28,14 +28,14 @@ const calculate = () => {
 
     // Cegah kalkulasi jika terakhir adalah operator
     if (operators.includes(lastChar)) {
-        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.'
+        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.';
         return;
     }
 
     try {
         display.value = eval(display.value);
     } catch (e) {
-        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.'
+        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.';
     }
 };
 
