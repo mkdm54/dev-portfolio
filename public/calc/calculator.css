@@ -21,16 +21,16 @@ body {
 
 .alert-message {
     position: absolute;
-    font-size: 15px;
+    font-size: 14px;
     top: -80px;
     width: auto;
     left: 50%;
-    height: auto;
+    height: 40px;
     transform: translateX(-50%);
     background-color: #f8d7da;
     color: #721c24;
     padding: 7px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #f5c6cb;
     display: flex;
     align-items: center;
@@ -44,6 +44,10 @@ body {
     -moz-transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
     -ms-transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
     -o-transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .alert-message.active {
