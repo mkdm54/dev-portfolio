@@ -23,21 +23,23 @@ body {
     position: absolute;
     top: -80px;
     /* Posisi awal di luar layar */
+    width: auto;
     left: 50%;
-    height: 30px;
+    height: auto;
     transform: translateX(-50%);
     background-color: #f8d7da;
     color: #721c24;
-    padding: 15px;
+    padding: 7px;
     border-radius: 5px;
     border: 1px solid #f5c6cb;
     display: flex;
     align-items: center;
     visibility: hidden;
-    /* Supaya tetap ada dalam layout */
     opacity: 0;
-    /* Supaya tidak terlihat */
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    width: auto;  /* Menyesuaikan panjang teks */
+    max-width: 80%; /* Batasi maksimal lebarnya */
+    white-space: nowrap; /* Agar teks tidak turun ke bawah */
 }
 
 .alert-message.active {
@@ -47,11 +49,9 @@ body {
 }
 
 .alert-message.default {
-    visibility: visible;
-    opacity: 1;
+    opacity: 0;
     top: -80px
 }
-
 
 .calc {
     background: linear-gradient(to bottom left, #160078, #4A00E0);
