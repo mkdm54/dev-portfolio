@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Digital Dismay';
+    src: url('fonts/digital-dismay.regular.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc {
+    background-color: black;
+    border-radius: 15px;
+    padding: 15px;
+    width: 320px;
+    overflow: hidden;
+}
+
+.display-container {
+    margin: 10px;
+}
+
+.display-the-result {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 2px;
+    font-size: 4rem;
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-family: 'Digital Dismay', sans-serif;
+}
+
+/* Tata letak tombol dibuat vertikal */
+.calc-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+}
+
+/* Baris tombol */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Tombol dasar */
+button {
+    color: white;
+    background-color: grey;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Tombol operator */
+.operator-btn {
+    background-color: white;
+    color: orange;
+}
+
+/* Tombol fungsi (AC, ⌫) */
+.function-btn {
+    background-color: white;
+    color: orange;
+}
+
+/* Tombol sama dengan */
+.equal-btn {
+    background-color: orange;
+    color: white;
+}
+
+.backspace-btn {
+    color: orange;
+}
+
+
