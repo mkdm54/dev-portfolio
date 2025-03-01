@@ -1,6 +1,15 @@
 const display = document.getElementById('display-the-result');
+const message = document.getElementById('message');
 
 const appendToDisplay = (input) => {
+    const lastChar = display.value.slice(-1);
+    const operators = ['+', '-', '*', '/'];
+
+    // Cegah dua operator berturut-turut
+    if (operators.includes(input) && operators.includes(lastChar)) {
+        return;
+    }
+
     display.value += input;
 };
 
@@ -9,10 +18,24 @@ const clearDisplay = () => {
 };
 
 const calculate = () => {
+    const lastChar = display.value.slice(-1);
+    const operators = ['+', '-', '*', '/'];
+
+    if (display.value.trim() === '') {
+        message.innerHTML = "Masukkan angka terlebih dahulu!";
+        return;
+    }
+
+    // Cegah kalkulasi jika terakhir adalah operator
+    if (operators.includes(lastChar)) {
+        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.'
+        return;
+    }
+
     try {
         display.value = eval(display.value);
     } catch (e) {
-        display.value = 'Error';
+        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.'
     }
 };
 
