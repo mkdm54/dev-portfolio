@@ -114,11 +114,25 @@ button {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.1s;
     -webkit-border-radius: 30%;
     -moz-border-radius: 30%;
     -ms-border-radius: 30%;
     -o-border-radius: 30%;
+    box-shadow: 0 8px 0 black;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+}
+
+button:active {
+    box-shadow: 0 4px 0 black;
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
 }
 
 .operator-btn {
