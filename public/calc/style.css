@@ -5,6 +5,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -15,7 +21,8 @@ body {
 
 .alert-message {
     position: absolute;
-    top: -80px; /* Posisi awal di luar layar */
+    top: -80px;
+    /* Posisi awal di luar layar */
     left: 50%;
     height: 30px;
     transform: translateX(-50%);
@@ -26,21 +33,18 @@ body {
     border: 1px solid #f5c6cb;
     display: flex;
     align-items: center;
-    visibility: hidden; /* Supaya tetap ada dalam layout */
-    opacity: 0; /* Supaya tidak terlihat */
+    visibility: hidden;
+    /* Supaya tetap ada dalam layout */
+    opacity: 0;
+    /* Supaya tidak terlihat */
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-h3 {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
 }
 
 .alert-message.active {
     visibility: visible;
     opacity: 1;
-    top: 20px; /* Muncul dari atas */
+    top: 20px;
+    /* Muncul dari atas */
 }
 
 
