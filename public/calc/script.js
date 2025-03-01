@@ -1,5 +1,4 @@
 const display = document.getElementById('display-the-result');
-const message = document.getElementById('message');
 
 const appendToDisplay = (input) => {
     const lastChar = display.value.slice(-1);
@@ -17,27 +16,43 @@ const clearDisplay = () => {
     display.value = '';
 };
 
+
 const calculate = () => {
+    const alertBox = document.getElementById('alert-message');
+
     const lastChar = display.value.slice(-1);
     const operators = ['+', '-', '*', '/'];
 
     if (display.value.trim() === '') {
-        message.innerHTML = "Masukkan angka terlebih dahulu!";
+        alertBox.innerHTML = "<h3>! Masukkan angka terlebih dahulu!</h3>";
+        alertBox.classList.add('active');  // Tampilkan alert dari atas 
+        setTimeout(() => {
+            alertBox.classList.remove('active'); 
+        }, 3000);
         return;
     }
 
-    // Cegah kalkulasi jika terakhir adalah operator
     if (operators.includes(lastChar)) {
-        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.';
+        alertBox.innerHTML = "<h3>! Ekspresi tidak valid! Periksa input Anda.</h3>";
+        alertBox.classList.add('active');
+        setTimeout(() => {
+            alertBox.classList.remove('active'); 
+        }, 3000);
         return;
     }
 
     try {
         display.value = eval(display.value);
+        alertBox.classList.remove('active'); // Hilangkan alert setelah sukses
     } catch (e) {
-        message.innerHTML = 'Ekspresi tidak valid! Periksa input Anda.';
+        alertBox.innerHTML = "<h3>! Ekspresi tidak valid! Periksa input Anda.</h3>";
+        setTimeout(() => {
+            alertBox.classList.remove('active'); 
+        }, 3000);
     }
 };
+
+
 
 function backspace() {
     display.value = display.value.slice(0, -1);
