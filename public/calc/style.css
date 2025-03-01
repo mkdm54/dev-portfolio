@@ -26,12 +26,15 @@ body {
     border: 1px solid #f5c6cb;
     display: flex;
     align-items: center;
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
     visibility: hidden; /* Supaya tetap ada dalam layout */
     opacity: 0; /* Supaya tidak terlihat */
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+h3 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .alert-message.active {
