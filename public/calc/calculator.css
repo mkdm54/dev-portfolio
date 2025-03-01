@@ -44,7 +44,12 @@ body {
     visibility: visible;
     opacity: 1;
     top: 20px;
-    /* Muncul dari atas */
+}
+
+.alert-message.default {
+    visibility: visible;
+    opacity: 1;
+    top: -80px
 }
 
 

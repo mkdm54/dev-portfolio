@@ -24,30 +24,32 @@ const calculate = () => {
     const operators = ['+', '-', '*', '/'];
 
     if (display.value.trim() === '') {
+        alertBox.classList.remove('default'); // Tambahkan ini
         alertBox.innerHTML = "<h3>Masukkan angka terlebih dahulu!</h3>";
         alertBox.classList.add('active');
         setTimeout(() => {
-            alertBox.classList.remove('active'); 
+            alertBox.classList.add('default'); 
         }, 3000);
         return;
     }
 
     if (operators.includes(lastChar)) {
+        alertBox.classList.remove('default'); // Tambahkan ini
         alertBox.innerHTML = "<h3>Ekspresi tidak valid Periksa input Anda.</h3>";
         alertBox.classList.add('active');
         setTimeout(() => {
-            alertBox.classList.remove('active'); 
+            alertBox.classList.add('default'); 
         }, 3000);
         return;
     }
 
     try {
         display.value = eval(display.value);
-        alertBox.classList.remove('active');
     } catch (e) {
+        alertBox.classList.remove('default')
         alertBox.innerHTML = "<h3>Ekspresi tidak valid! Periksa input Anda.</h3>";
         setTimeout(() => {
-            alertBox.classList.remove('active'); 
+            alertBox.classList.add('default'); 
         }, 3000);
     }
 };
