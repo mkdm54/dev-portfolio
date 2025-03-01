@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "vercel": "^41.2.0"
+  },
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "start": "vercel dev"
   }
 }
