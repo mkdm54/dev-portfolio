@@ -3,12 +3,37 @@
     src: url('fonts/digital-dismay.regular.otf') format('opentype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.alert {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8d7da; /* Warna merah muda lembut */
+    color: #721c24; /* Warna teks merah gelap */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb; /* Warna border */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.alert h3 {
+    margin: 0;
+    font-size: 16px;
 }
 
 .calc {
@@ -36,7 +61,7 @@ body {
     border: none;
     outline: none;
     background-color: white;
-    
+
 }
 
 .calc-btn {
