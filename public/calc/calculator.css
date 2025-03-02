@@ -207,7 +207,6 @@ button:active {
     .calc {
         width: 80%;
         max-width: 350px;
-        /* Batas maksimum */
     }
 
     .display-the-result {
@@ -226,20 +225,17 @@ button:active {
 
     .row {
         gap: 15px;
-        /* Mengurangi jarak antar tombol */
     }
 }
 
 /* Untuk Handphone (≤ 600px) */
 @media (max-width: 600px) {
 
-    /* Membungkus seluruh kalkulator agar tetap proporsional */
     .calc-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        /* Agar kalkulator tetap di tengah */
     }
 
     .calc {
@@ -280,6 +276,5 @@ button:active {
 
     .row {
         gap: 17px;
-        /* Mengurangi jarak antar tombol */
     }
 }
