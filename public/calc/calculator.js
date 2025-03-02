@@ -146,7 +146,7 @@ const calculate = () => {
         alertBox.innerHTML = "<h3>Masukkan angka terlebih dahulu</h3>";
         alertBox.classList.add('active');
         setTimeout(() => {
-            alertBox.classList.add('default'); 
+            alertBox.classList.add('default');
         }, 3000);
         return;
     }
@@ -156,7 +156,7 @@ const calculate = () => {
         alertBox.innerHTML = "<h3>Input tidak valid!</h3>";
         alertBox.classList.add('active');
         setTimeout(() => {
-            alertBox.classList.add('default'); 
+            alertBox.classList.add('default');
         }, 3000);
         return;
     }
@@ -170,7 +170,7 @@ const calculate = () => {
         alertBox.classList.remove('default');
         alertBox.innerHTML = "<h3>Input tidak valid!</h3>";
         setTimeout(() => {
-            alertBox.classList.add('default'); 
+            alertBox.classList.add('default');
         }, 3000);
     }
 };
