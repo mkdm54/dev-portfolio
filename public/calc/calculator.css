@@ -74,14 +74,14 @@ body {
 }
 
 .display-container {
-    margin: 10px;
+    margin: 9px;
 }
 
 .display-the-result {
     color: rgb(0, 0, 0);
     width: 100%;
     padding: 2px;
-    font-size: 4rem;
+    font-size: 3.4rem;
     text-align: right;
     border: none;
     outline: none;
@@ -91,12 +91,11 @@ body {
 .history-display {
     color: rgb(100, 100, 100);
     width: 100%;
-    font-size: 4rem;
     text-align: right;
     border: none;
     outline: none;
     background-color: white;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .calc-btn {
