@@ -145,9 +145,19 @@ button:active {
     color: rgb(255, 0, 0);
 }
 
+.clear-btn:active {
+    color: rgb(216, 1, 1);
+    background-color: rgb(177, 177, 177);
+}
+
 .backspace-btn {
     background-color: white;
     color: rgb(255, 0, 0);
+}
+
+.backspace-btn:active {
+    color: rgb(216, 1, 1);
+    background-color: rgb(177, 177, 177);
 }
 
 .function-btn {
