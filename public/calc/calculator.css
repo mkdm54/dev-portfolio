@@ -17,6 +17,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(to bottom right, #1e01a0, #4A00E0);
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
 }
 
 .alert-message {
