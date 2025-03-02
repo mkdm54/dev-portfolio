@@ -128,12 +128,15 @@ button {
 
 button:active {
     box-shadow: 0 4px 0 black;
-    background-color: rgb(177, 177, 177);
     transform: translateY(4px);
     -webkit-transform: translateY(4px);
     -moz-transform: translateY(4px);
     -ms-transform: translateY(4px);
     -o-transform: translateY(4px);
+}
+
+.number-btn:active {
+    background-color: rgb(177, 177, 177);
 }
 
 .operator-btn {
