@@ -200,3 +200,65 @@ button:active {
     color: rgb(177, 177, 177);
     background-color: rgb(197, 128, 0);
 }
+
+
+/* Untuk Tablet (600px - 900px) */
+@media (max-width: 900px) {
+    .calc {
+        width: 80%;
+        max-width: 350px; /* Batas maksimum */
+    }
+
+    .display-the-result {
+        font-size: 2.8rem;
+    }
+
+    .history-display {
+        font-size: 18px;
+    }
+
+    button {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .row {
+        gap: 15px; /* Mengurangi jarak antar tombol */
+    }
+}
+
+/* Untuk Handphone (≤ 600px) */
+@media (max-width: 600px) {
+    /* Membungkus seluruh kalkulator agar tetap proporsional */
+    .calc-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Agar kalkulator tetap di tengah */
+    }
+
+    .calc {
+        width: 90%;
+        max-width: 280px;
+        padding: 10px;
+    }
+
+    .display-the-result {
+        font-size: 2.4rem;
+    }
+
+    .history-display {
+        font-size: 16px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .row {
+        gap: 10px; /* Mengurangi jarak antar tombol */
+    }
+}
