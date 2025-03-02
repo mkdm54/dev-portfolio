@@ -1,25 +1,30 @@
 const display = document.getElementById('display-the-result');
+const historyDisplay = document.getElementById('history-display');
+let historyEquation = "";
 
 const appendToDisplay = (input) => {
-    const lastChar = display.value.slice(-1);
     const operators = ['+', '-', '*', '/'];
 
-    // Cegah dua operator berturut-turut
-    if (operators.includes(input) && operators.includes(lastChar)) {
-        return;
+    if (operators.includes(input)) {
+        // Jika sebelumnya ada angka, pindahkan ke history
+        if (display.value !== "") {
+            historyEquation = display.value + " " + input;
+            historyDisplay.value = historyEquation; // Menampilkan ke input history
+            display.value = ""; // Kosongkan display utama
+        }
+    } else {
+        display.value += input;
     }
-
-    display.value += input;
 };
 
 const clearDisplay = () => {
     display.value = '';
+    historyDisplay.value = '';
+    historyEquation = '';
 };
-
 
 const calculate = () => {
     const alertBox = document.getElementById('alert-message');
-
     const lastChar = display.value.slice(-1);
     const operators = ['+', '-', '*', '/'];
 
@@ -44,9 +49,12 @@ const calculate = () => {
     }
 
     try {
-        display.value = eval(display.value);
+        let result = eval(historyEquation + " " + display.value); // Hitung hasil
+        historyEquation += " " + display.value + " ="; // Update history
+        historyDisplay.value = historyEquation; // Tampilkan history di input
+        display.value = result; // Tampilkan hasil di display utama
     } catch (e) {
-        alertBox.classList.remove('default')
+        alertBox.classList.remove('default');
         alertBox.innerHTML = "<h3>Input tidak valid!</h3>";
         setTimeout(() => {
             alertBox.classList.add('default'); 
@@ -54,20 +62,16 @@ const calculate = () => {
     }
 };
 
-
-
 function backspace() {
     display.value = display.value.slice(0, -1);
 }
 
-// Fungsi untuk ± (toggle sign)
 function toggleSign() {
     if (display.value !== '') {
         display.value = String(-1 * parseFloat(display.value));
     }
 }
 
-// Fungsi untuk % (percentage)
 function calculatePercentage() {
     if (display.value !== '') {
         display.value = String(parseFloat(display.value) / 100);
